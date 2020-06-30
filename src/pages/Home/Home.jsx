@@ -25,7 +25,6 @@ class Home extends Component {
                     <CardInfo value={expense} title='Expenses' color='danger' classes='ion ion-pie-graph' />
                     <CardInfo value={investment} title='Investment' color='info' classes='ion ion-bag' />
                     <ChartMonthExpense title='Total By Category' firstTitle='Salary' secondTitle='Expense' charts='bar'/>
-                    {/* <ChartMonthExpense title='Total by Category' firstTitle='Salary' secondTitle='Expense' charts='pie'/> */}
                 </Content>
             </div>
         )

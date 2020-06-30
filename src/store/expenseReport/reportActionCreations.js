@@ -2,7 +2,7 @@ import axios from 'axios'
 import { toastr } from 'react-redux-toastr'
 import { reset as resetForm, initialize } from 'redux-form'
 
-const BASE_URL = 'http://localhost:3003/api'
+const BASE_URL = 'http://firstmillion-com.umbler.net/api'
 const INITIAL_VALUES = { credits: [{}], debts: [{}] }
 
 export function getList() {

@@ -14,7 +14,7 @@ export default function Index() {
             <BasicMenuSide>
                 <Menu title='Transactions' icon ='fas fa-edit' open='menu-open'>
                     <MenuItem title='Expenses' />
-                    <MenuItem title='Purchase list' />
+                    <MenuItem title='Purchase list' rota='#purchase-list'/>
                 </Menu>
                 <Menu title='Report' icon ='fa fa-table'>
                     <MenuItem title='Purchase list' />
