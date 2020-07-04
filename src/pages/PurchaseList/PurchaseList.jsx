@@ -2,17 +2,21 @@ import React, { Component } from 'react'
 
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { selectTab } from '../../store/purchaseList/purchaseActions'
+import { init, create, update, remove } from '../../store/purchaseList/purchaseActions'
+
+import  './style.css'
 
 import Tabs from './tabs'
 import TabsHeader from './tabsHeader'
 import TabHeader from './tabHeader'
 import TabsContent from './tabsContent'
 import TabContent from './tabContent'
+import PurchaseListTable from './PurchaseListTable'
+import PurchaseForm from './PurchaseForm'
 
 class PurchaseList extends Component {
     componentWillMount() {
-        this.props.selectTab('tabList')
+        this.props.init()
     }
     render() {
         return (
@@ -25,10 +29,18 @@ class PurchaseList extends Component {
                         <TabHeader title='Delete' target='tabDelete' />
                     </TabsHeader>
                     <TabsContent>
-                        <TabContent id='tabList'><h1>tab List</h1></TabContent>
-                        <TabContent id='tabInclude'><h1>tabInclude</h1></TabContent>
-                        <TabContent id='tabEdit'><h1>tabEdit</h1></TabContent>
-                        <TabContent id='tabDelete'><h1>tabDelete</h1></TabContent>
+                        <TabContent id='tabList'>
+                            <PurchaseListTable taId='tabList'/>
+                        </TabContent>
+                        <TabContent id='tabInclude'>
+                            <PurchaseForm onSubmit={this.props.create} tabId='tabInclude'/>
+                        </TabContent>
+                        <TabContent id='tabEdit'>
+                            <PurchaseForm  onSubmit={this.props.update} tabId='tabEdit'/>
+                        </TabContent>
+                        <TabContent id='tabDelete'>
+                            <PurchaseForm  onSubmit={this.props.remove} readOnly={true} tabId='tabDelete'/>
+                        </TabContent>                       
                     </TabsContent>
                 </Tabs>
             </div>
@@ -36,5 +48,5 @@ class PurchaseList extends Component {
     }
 }
 
-const mapDispatchToProps = dispatch => bindActionCreators({ selectTab }, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({ init, create, update, remove }, dispatch)
 export default connect(null, mapDispatchToProps)(PurchaseList)
