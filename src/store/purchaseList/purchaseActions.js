@@ -27,6 +27,11 @@ export function remove(values) {
     return submit(values, 'delete')
 }
 
+export function clone(values) {
+    console.log(values)
+    return submit(values, 'post')
+}
+
 function submit(values, method) {
 
     return dispatch => {

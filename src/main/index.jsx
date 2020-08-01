@@ -13,16 +13,17 @@ export default function Index() {
             <BasicHeader />
             <BasicMenuSide>
                 <Menu title='Transactions' icon ='fas fa-edit' open='menu-open'>
-                    <MenuItem title='Expenses' />
+                    <MenuItem title='New Expenses' rota='#expense-new'/>
                     <MenuItem title='Purchase list' rota='#purchase-list'/>
                 </Menu>
                 <Menu title='Report' icon ='fa fa-table'>
                     <MenuItem title='Purchase list' />
-                    <MenuItem title='Expenses' />
+                    <MenuItem title='Expenses' rota='#expense-report'/>
                 </Menu>
                 <Menu title='Register' icon='fa fa-plus-square'>
                     <MenuItem title='Product' rota='#product-register'/>
-                    <MenuItem title='Fixed Expenses' />
+                    <MenuItem title='Fixed Expenses' rota='#fixed-expense'/>
+                    <MenuItem title='Category' rota='#category'/>
                 </Menu>
                 <Menu title='Settings' icon='fa fa-cog'>
                     <MenuItem title='Profile' />

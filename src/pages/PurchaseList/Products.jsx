@@ -33,6 +33,7 @@ class Products extends Component {
                 <td style={{ width: '30%' }}><Field name={`products[${index}].product`} component={Input} placeholder='Product Name' readOnly={this.props.readOnly} /></td>
                 <td style={{ width: '15%' }}><Field name={`products[${index}].unitValue`} component={Input} placeholder='Unity Value' readOnly={this.props.readOnly} /></td>
                 <td style={{ width: '10%' }}><Field name={`products[${index}].quantity`} component={Input} placeholder='Quantity' readOnly={this.props.readOnly} /></td>
+                <td style={{ width: '15%' }}><Field name={`products[${index}].category`} component={Input} placeholder='Category' readOnly={this.props.readOnly} /></td>
                 <td style={{ width: '10%' }}><Field name={`products[${index}].status`} component={Input} placeholder='Status' readOnly={true} /></td>
                 <td>
                     <If test={!tabDelete}>
@@ -69,6 +70,7 @@ class Products extends Component {
                             <th>Product</th>
                             <th>Unit Value</th>
                             <th>Quantity</th>
+                            <th>Category</th>
                             <th>Status</th>
                             <If test={!tabDelete}>
                                 <th>Actions</th>

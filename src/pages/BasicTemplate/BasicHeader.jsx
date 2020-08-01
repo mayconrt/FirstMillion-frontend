@@ -15,12 +15,6 @@ export default function BasicHeader(props) {
                 <li className="nav-item d-none d-sm-inline-block">
                     <a href="#/" className="nav-link">Home</a>
                 </li>
-                <li className="nav-item d-none d-sm-inline-block">
-                    <a href="#expense-report" className="nav-link">Expense Report</a>
-                </li>
-                <li className="nav-item d-none d-sm-inline-block">
-                    <a href="#expense-new" className="nav-link">New Expense</a>
-                </li>                
             </ul>
 
             <ul className="navbar-nav ml-auto">
